@@ -440,7 +440,9 @@ form > button {
   display: block;
   border: none;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: red;
+  font-style: oblique;
   border-radius: 6px;
   padding: 10px;
   margin-top: 10px;
