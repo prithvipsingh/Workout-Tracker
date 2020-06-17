@@ -66,6 +66,18 @@ module.exports = function(app){
         }
             
     })
+    // DELETE WORKOUT
+    app.delete("/api/workouts/:id", ({params}, res) => {
+        const workoutId = params.id;
+        // removing data from db
+        db.Workout.remove({_id: workoutId})
+            .then(dbWorkout => {
+                res.json(dbWorkout)
+            })
+            .catch(err => {
+                res.json(err);
+            });
+    })
 
     app.get("/api/workouts/range", (req, res) => {
         db.Workout.find({})
